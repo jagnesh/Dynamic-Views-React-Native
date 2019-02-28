@@ -29,7 +29,7 @@ export default class FormView extends Component {
     handleEmail = (text) => {
         let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (reg.test(text) === false) {
-            this.setState({ emailText: text, emailError: true })
+            this.setState({ emailText: text, emailError: true }, () => this.props.callback(this.props.formNo, this.getData()))
         } else {
             this.setState({ emailText: text, emailError: false }, () => this.props.callback(this.props.formNo, this.getData()))
         }
@@ -38,7 +38,7 @@ export default class FormView extends Component {
     handleName = (text) => {
         let reg = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/
         if (reg.test(text) === false) {
-            this.setState({ nameText: text, nameError: true })
+            this.setState({ nameText: text, nameError: true }, () => this.props.callback(this.props.formNo, this.getData()))
         } else {
             this.setState({ nameText: text, nameError: false }, () => this.props.callback(this.props.formNo, this.getData()))
         }
@@ -47,7 +47,7 @@ export default class FormView extends Component {
     handleContact = (text) => {
         let reg = /^\s*(?:\+?(\d{1,3}))?[- (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})(?: *[x/#]{1}(\d+))?\s*$/
         if (reg.test(text) === false) {
-            this.setState({ contactText: text, contactError: true })
+            this.setState({ contactText: text, contactError: true }, () => this.props.callback(this.props.formNo, this.getData()))
         } else {
             this.setState({ contactText: text, contactError: false }, () => this.props.callback(this.props.formNo, this.getData()))
         }
@@ -56,7 +56,7 @@ export default class FormView extends Component {
     handleWebsite = (text) => {
         let reg = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/
         if (reg.test(text) === false) {
-            this.setState({ websiteText: text, websiteError: true })
+            this.setState({ websiteText: text, websiteError: true }, () => this.props.callback(this.props.formNo, this.getData()))
         } else {
             this.setState({ websiteText: text, websiteError: false }, () => this.props.callback(this.props.formNo, this.getData()))
         }
@@ -65,7 +65,7 @@ export default class FormView extends Component {
         let reg = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/
         if (reg.test(text) === false) {
             console.log('if')
-            this.setState({ dobText: text, dobError: true })
+            this.setState({ dobText: text, dobError: true }, () => this.props.callback(this.props.formNo, this.getData()))
         } else {
             console.log('else')
             this.setState({ dobText: text, dobError: false }, () => this.props.callback(this.props.formNo, this.getData()))
