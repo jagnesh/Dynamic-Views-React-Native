@@ -1,4 +1,4 @@
-# Dynamic-Views-React-Native-
+# Dynamic-Views-React-Native
 Create forms dynamically and data validation 
 
 
