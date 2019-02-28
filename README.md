@@ -1,9 +1,11 @@
 # Dynamic-Views-React-Native-
 Data Handling of dynamically created forms
 
-![Imgur](https://i.imgur.com/oNl5z9O.png)
-
 
 Captured data from dynamic forms
+![Imgur](https://i.imgur.com/7dbJWes.png)   ![Imgur](https://i.imgur.com/lWlhRSm.png)  
 
-![Imgur](https://i.imgur.com/kIu7Rbx.png)
+
+If form contains any Error:
+
+![Imgur](https://i.imgur.com/Byjz5O2.png)    ![Imgur](https://i.imgur.com/052cFTM.png)
