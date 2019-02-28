@@ -1,5 +1,5 @@
 # Dynamic-Views-React-Native-
-Data Handling of dynamically created forms
+Create forms dynamically and data validation 
 
 
 Captured data from dynamic forms
