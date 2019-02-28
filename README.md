@@ -3,6 +3,7 @@ Data Handling of dynamically created forms
 
 
 Captured data from dynamic forms
+
 ![Imgur](https://i.imgur.com/7dbJWes.png)   ![Imgur](https://i.imgur.com/lWlhRSm.png)  
 
 
